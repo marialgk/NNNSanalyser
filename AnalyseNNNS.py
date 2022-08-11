@@ -26,6 +26,10 @@ if __name__ == '__main__':
                         help="Type of the input. Default is xlsx.",
                         choices=['xlsx', 'csv'],
                         default="xlsx")
+    parser.add_argument("--boxplot",
+                        type=bool,
+                        help="Produces boxplot images. Default is True",
+                        default=True)
     args = parser.parse_args()
 
 
@@ -402,7 +406,9 @@ def main():
     sum_scores = summary_scores(df)
     sum_table = summary_table(sum_scores)
     sum_table.to_csv(f'summary_scores_{output}.txt', sep='\t')
-    boxplots(sum_scores, output)
+
+    if args.boxplot == True:
+        boxplots(sum_scores, output)
 
 
 if __name__ == "__main__":
