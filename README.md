@@ -31,6 +31,12 @@ Currently, NNNS Analyse does not offer options for customizing the Boxplots. Fee
 - **--boxplot:** Optional. Boolean. If True, produces and saves boxplots. Default is True.
  - **-h, --help:** Show help message.
 
+## Future plans
+NNNS Analyser is still under development. Next versions may include:
+- English and Spanish versions of the Excel template.
+- Option to compare the scores of two groups.
+- Further visualization options.
+
 ## Further reading
 
 Original NNNS publication:
