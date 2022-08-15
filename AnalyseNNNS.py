@@ -239,7 +239,7 @@ def check_range(df):
             continue
 
         valid_value = row.isin(valid_scores[variable[0]])
-        invalid = list(valid_value[valid_value is False].index)
+        invalid = list(valid_value[valid_value == False].index)
 
         for baby in invalid:
             print(f'Invalid or missing score for the variable {variable[0]}, sample {baby}')
