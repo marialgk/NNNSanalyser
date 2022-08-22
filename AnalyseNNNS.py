@@ -55,7 +55,7 @@ def import_excel(file):
                        skiprows=[1, 2, 3, 4])
 
     # Remove useless columns.
-    df = df.drop(1, level=1, axis=0)
+    df = df.drop(1, level="Lado", axis=0)
     df = df.reset_index(level=0, drop=True)
     df = df.dropna(axis=1, how='all')
 
